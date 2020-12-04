@@ -5,23 +5,22 @@ require_once("clases/AccesoDatos.php");
 require_once("clases/Usuario.php");
 
 if (!isset($usuario)) {//alta
-    $nombre = "";
-    $email = "";
-    $id = "";
-    $botonClick = "AgregarUsuario()";
+    $id          = "";
+    $nombre      = "";
+    $email       = "";
+    $botonClick  = "AgregarUsuario()";
     $botonTitulo = "Guardar";
 } else {
     $nombre = $usuario->nombre;
-    $email = $usuario->email;
-    $id = $usuario->id;
-    
-    if(isset($usuario->accion)){
-        $botonClick = $usuario->accion == "Modificar" ? "ModificarUsuario()" : "EliminarUsuario()";    
+    $email  = $usuario->email;
+    $id     = $usuario->id;
+
+    if (isset($usuario->accion)) {
+        $botonClick  = $usuario->accion == "Modificar" ? "ModificarUsuario()" : "EliminarUsuario()";
         $botonTitulo = $usuario->accion;
-    }
-    else {
-        $botonClick = "ModificarUsuario()";    
-        $botonTitulo = "Editar Perfil";        
+    } else {
+        $botonClick  = "ModificarUsuario()";
+        $botonTitulo = "Editar Perfil";
     }
 }
 
@@ -34,17 +33,18 @@ $perfiles = Usuario::TraerTodosLosPerfiles();
     <input type="text" placeholder="E-mail" id="txtEmail" value="<?php echo $email; ?>" />
     <input type="password" placeholder="Password" id="txtPassword" value="" />
 
-    <span>Perfil</span>
+    <h3>Perfil</h3>
     <select id="cboPerfiles" >
         <?php
-        foreach ($perfiles AS $p) {
-            $miPerfil = isset($usuario->perfil) ? $usuario->perfil : "";
-            $selected = $miPerfil == $p["perfil"] ? "selected" : "";
-            echo "<option value='" . $p["perfil"] . "' " . $selected . ">" . $p["perfil"] . "</option>";
-        }
-        ?>	
+            foreach ($perfiles as $p) {
+                $miPerfil = isset($usuario->perfil) ? $usuario->perfil : "";
+                $selected = $miPerfil == $p["perfil"] ? "selected" : "";
+                echo "<option value='" . $p["perfil"] . "' " . $selected . ">" . $p["perfil"] . "</option>";
+            }
+        ?>
     </select>
-    <br/><br/>
+    <br />
+    <br />
 
     <input type="button" class="MiBotonUTN" onclick="<?php echo $botonClick; ?>" value="<?php echo $botonTitulo; ?>"  />
     <input type="hidden" id="hdnQueHago" value="agregar" />

@@ -1,11 +1,10 @@
 <?php
 //require_once("verificar_sesion.php");
-
 //$user = $_SESSION["Usuario"];
 ?>
 <html>
     <head>
-        <title>PROGRAMACION III</title> 
+        <title>PROGRAMACION III</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

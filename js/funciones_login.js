@@ -53,7 +53,7 @@ function AutocompletarCampo(parametro){
                 return;
             }
             //alert(objJson.password);
-                
+
              $("#email").val(objJson.email);
              $("#password").val(objJson.password);
              $("#nombre").val(objJson.nombre);
@@ -65,7 +65,8 @@ function AutocompletarCampo(parametro){
 
 }
 
-/* 1- CREAR FUNCION JQUERY QUE RECIBA COMO PARAMETRO UN VALOR EL CUAL VA A CONVERTIR EN UN OBJ JSON EL VALOR PASADO COMO PARAMETRO
-2- CREAR FUNCION PHP QUE RECIBA COMO PARAM JSON, QUE CONSULTE A UNA BASE DE DATOS
-
+/*
+ 1- CREAR FUNCION JQUERY QUE RECIBA COMO PARAMETRO UN VALOR EL CUAL VA A CONVERTIR EN UN OBJ JSON
+    EL VALOR PASADO COMO PARAMETRO
+ 2- CREAR FUNCION PHP QUE RECIBA COMO PARAM JSON, QUE CONSULTE A UNA BASE DE DATOS
 */

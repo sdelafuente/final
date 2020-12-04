@@ -62,11 +62,11 @@ function CargarFormUsuario() {
     });
 
 }
+
 function AgregarUsuario() {
-
-//implementar...
-
+    //implementar...
 }
+
 function EditarUsuario(obj) {//#sin case
 
     var pagina = "./administracion.php";
@@ -90,14 +90,16 @@ function EditarUsuario(obj) {//#sin case
         alert(jqXHR.responseText + "\n" + textStatus + "\n" + errorThrown);
     });
 }
+
 function ModificarUsuario() {//#3a
 
     if (!confirm("Modificar USUARIO?")) {
         return;
     }
-//implementar...
+    //implementar...
 
 }
+
 function EliminarUsuario() {//#3b
 
     if (!confirm("Eliminar USUARIO?")) {
@@ -140,6 +142,7 @@ function EliminarUsuario() {//#3b
     });
 
 }
+
 function Logout() {//#5
 
     var pagina = "./administracion.php";
@@ -164,7 +167,7 @@ function Logout() {//#5
 
 }
 function traerCdsConWS(){
-    
+
 //implementar...
 
 }
